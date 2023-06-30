@@ -25,10 +25,8 @@ edited_df = st.data_editor(df)
 from elosports.elo import Elo
 
 eloLeague = Elo(k = 20)
-eloLeague.addPlayer('BLT')
-eloLeague.addPlayer('Grilled Cheese')
-eloLeague.addPlayer('Peanut Butter & Jelly')
-eloLeague.addPlayer('Tuna Salad')
+for i in sandwiches:
+    eloLeague.addPlayer(i)
 
 #function to update elo scores
 def update_elo(df):
@@ -39,8 +37,7 @@ def update_elo(df):
             eloLeague.gameOver(winner=df['Sandwich Two'][i], loser=df['Sandwich One'][i], winnerHome=True)
 
 #update elo scores
-update_elo(edited_df)
-st.write(eloLeague.ratingDict)
-st.stop()
-elo_scores = update_elo(edited_df)
-st.write(elo_scores)
+if st.button('Input Sandwich Rating'):
+    update_elo(edited_df)
+    st.dataframe(eloLeague.ratingDict)
+
