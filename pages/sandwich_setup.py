@@ -90,6 +90,9 @@ edited_df = st.data_editor(df, use_container_width=True)
 st.divider()
 st.subheader("Satisfied with the pairings?")
 if st.button("Save Pairings") == True:
+    import time
     edited_df.to_csv("sandwich_pairings.csv", index=False)
+    st.success("Pairings saved!")
+    time.sleep(2)
 if st.button("Regenerate Pairings"):
     st.experimental_rerun()
