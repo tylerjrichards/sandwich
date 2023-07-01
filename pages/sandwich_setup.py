@@ -86,12 +86,10 @@ if any(df["Pairing 1"] == df["Pairing 2"]):
     st.experimental_rerun()
 edited_df = st.data_editor(df, use_container_width=True)
 
-# if for any row, pairing 1 is the same as pairing 2, then regenerate pairings
-
 
 st.divider()
 st.subheader("Satisfied with the pairings?")
-if st.button("Save Pairings"):
+if st.button("Save Pairings") == True:
     edited_df.to_csv("sandwich_pairings.csv", index=False)
 if st.button("Regenerate Pairings"):
     st.experimental_rerun()
