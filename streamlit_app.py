@@ -18,7 +18,7 @@ st.write("Made with love by [Tyler Richards](https://tylerjrichards.com)")
 try:
     sandwich_rounds = pd.read_csv("sandwich_pairings.csv")
 except:
-    st.write("Please head over to the sandwich setup app on sidebar first!")
+    st.warning("Please head over to the sandwich setup app on sidebar first!")
     st.stop()
 sandwich_rounds["Pairing 1 Winner?"] = False
 
