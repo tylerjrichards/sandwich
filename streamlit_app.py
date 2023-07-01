@@ -15,8 +15,11 @@ st.write(
     app. The results will be displayed at the end of the tournament."""
 )
 st.write("Made with love by [Tyler Richards](https://tylerjrichards.com)")
-sandwich_rounds = pd.read_csv("sandwich_pairings.csv")
-
+try:
+    sandwich_rounds = pd.read_csv("sandwich_pairings.csv")
+except:
+    st.write("Please head over to the sandwich setup app on sidebar first!")
+    st.stop()
 sandwich_rounds["Pairing 1 Winner?"] = False
 
 # check if sandwich results.csv exists
