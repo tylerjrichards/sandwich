@@ -6,10 +6,6 @@ import streamlit as st
 from elosports.elo import Elo
 
 st.image("sandwich.png")
-#write out all the files in the directory
-for dirname, _, filenames in os.walk('.'):
-    for filename in filenames:
-        st.write(os.path.join(dirname, filename))
 
 st.subheader("Vote for your favorite sandwich!")
 st.write(
