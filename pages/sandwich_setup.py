@@ -1,3 +1,8 @@
+import itertools
+import random
+import string
+
+import pandas as pd
 import streamlit as st
 
 st.title("Sandwich Setup")
@@ -40,12 +45,6 @@ attendees = st.multiselect(
     options=attendees_options, label="Select the attendees", default=attendees_options
 )
 round_number = st.number_input("Select the number of rounds", 0, 4, 2)
-
-import itertools
-import random
-import string
-
-import pandas as pd
 
 
 def remove_digits(s: str):
