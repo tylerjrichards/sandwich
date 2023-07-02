@@ -64,7 +64,7 @@ st.subheader(":sandwich: Sandwich Rating Results :sandwich:")
 st.write("The results are in! Here are the final ratings for each sandwich.")
 
 
-eloLeague = Elo(k=20)
+eloLeague = Elo(k=40)
 
 unique_vals = pd.unique(base_dataframe[["Pairing 1", "Pairing 2"]].values.ravel("K"))
 
@@ -81,7 +81,7 @@ def update_elo(df):
             )
         else:
             eloLeague.gameOver(
-                winner=df["Pairing 1"][i], loser=df["Pairing 2"][i], winnerHome=True
+                winner=df["Pairing 2"][i], loser=df["Pairing 1"][i], winnerHome=True
             )
 
 

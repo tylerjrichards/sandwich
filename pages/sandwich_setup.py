@@ -12,7 +12,6 @@ sandwich_options = [
     "El Metate",
     "Lucinda's",
     "Thorough Bread",
-    "Turner's",
     "RT Rotisserie",
     "Media Noche",
     "Tartine",
@@ -20,21 +19,17 @@ sandwich_options = [
     "Schlock's",
 ]
 attendees_options = [
-    "Tenn",
-    "Connie",
-    "Gatsby",
-    "Tanzeela",
-    "Lisa",
     "Ashni",
-    "Noah",
     "Serin",
-    "Kishan",
     "Ron",
     "Shelby",
     "Nikhil",
     "Tyler",
-    "Andrew",
+    "Andrew1",
     "Sanae",
+    "Sig",
+    "Ilya",
+    "Andrew2",
 ]
 sandwiches = st.multiselect(
     options=sandwich_options,
@@ -90,7 +85,7 @@ edited_df = st.data_editor(df, use_container_width=True)
 st.divider()
 
 
-edited_df.to_csv("sandwich_pairings.csv", index=False)
+#edited_df.to_csv("sandwich_pairings.csv", index=False)
 st.success("Pairings saved!")
 
 if st.button("Regenerate Pairings"):

@@ -1,0 +1,34 @@
+Round,Attendee,Pairing 1,Pairing 2,Pairing 1 Winner?
+1,Ashni,RT Rotisserie,Wise Son's,True
+1,Serin,Hazel,Lucinda's,False
+1,Ron,Hazel,Wise Son's,False
+1,Shelby,Wise Son's,Schlock's,False
+1,Nikhil,Hazel,El Metate,False
+1,Tyler,Lucinda's,RT Rotisserie,False
+1,Andrew1,Media Noche,Schlock's,False
+1,Sanae,Hazel,El Metate,False
+1,Sig,Media Noche,Wise Son's,True
+1,Ilya,Thorough Bread,RT Rotisserie,False
+1,Andrew2,RT Rotisserie,Wise Son's,True
+2,Ashni,Lucinda's,Media Noche,True
+2,Serin,Lucinda's,Schlock's,True
+2,Ron,Hazel,El Metate,True
+2,Shelby,Lucinda's,Tartine,True
+2,Nikhil,Lucinda's,Thorough Bread,True
+2,Tyler,Hazel,Schlock's,False
+2,Andrew1,Hazel,Tartine,True
+2,Sanae,Thorough Bread,Media Noche,True
+2,Sig,Thorough Bread,Schlock's,False
+2,Ilya,Hazel,Lucinda's,True
+2,Andrew2,Tartine,El Metate,True
+3,Ashni,El Metate,Lucinda's,False
+3,Serin,Media Noche,Wise Son's,False
+3,Ron,Tartine,Wise Son's,False
+3,Shelby,El Metate,Thorough Bread,True
+3,Nikhil,Wise Son's,Tartine,False
+3,Tyler,El Metate,RT Rotisserie,True
+3,Andrew1,Thorough Bread,Wise Son's,False
+3,Sanae,Lucinda's,Thorough Bread,True
+3,Sig,Hazel,Tartine,False
+3,Ilya,Media Noche,Tartine,False
+3,Andrew2,Thorough Bread,Schlock's,False
