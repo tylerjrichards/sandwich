@@ -56,9 +56,6 @@ if st.button("Clear Results"):
     os.remove("sandwich_results.csv")
 
 
-password = st.text_input("Enter the password to see the results", type="password")
-if password != "sandwich":
-    st.stop()
 
 st.subheader(":sandwich: Sandwich Rating Results :sandwich:")
 st.write("The results are in! Here are the final ratings for each sandwich.")
