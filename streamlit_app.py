@@ -32,21 +32,22 @@ except:
 
 
 # makes a base dataframe with the same columns as the sandwich pairings
-
 base_dataframe = pd.DataFrame(
     columns=["Round", "Attendee", "Pairing 1", "Pairing 2", "Pairing 1 Winner?"]
 )
 for i in range(sandwich_rounds["Round"].max()):
     if preprepared_results == False:
-        new_df = sandwich_rounds[sandwich_rounds["Round"] == i + 1]
+        round_df = sandwich_rounds[sandwich_rounds["Round"] == i + 1]
         st.subheader(":balloon: Round " + str(i + 1) + " :balloon:")
-        edited_df = st.data_editor(new_df)
-        base_dataframe = pd.concat([base_dataframe, edited_df], ignore_index=True)
+        edited_round_df = st.data_editor(round_df)
+        base_dataframe = pd.concat([base_dataframe, edited_round_df], ignore_index=True)
     else:
-        new_df = sandwich_results[sandwich_results["Round"] == i + 1]
+        round_df = sandwich_results[sandwich_results["Round"] == i + 1]
         st.subheader(":balloon: Round " + str(i + 1) + " :balloon:")
-        edited_df = st.data_editor(new_df)
-        base_dataframe = pd.concat([base_dataframe, edited_df], ignore_index=True)
+        edited_round_df = st.data_editor(round_df)
+        base_dataframe = pd.concat([base_dataframe, edited_round_df], ignore_index=True)
+
+
 
 st.subheader("🎉 Combined Results: 🎉")
 st.data_editor(base_dataframe, num_rows="dynamic")
@@ -88,11 +89,12 @@ rating_df = pd.DataFrame.from_dict(
 ).reset_index()
 rating_df.columns = ["Sandwich Shop", "Rating"]
 final_graph = px.bar(rating_df, x="Sandwich Shop", y="Rating")
-# change y axis to be between 1300 and 1700
 final_graph.update_layout(yaxis_range=[1350, 1650])
-# order the x axis by rating
 final_graph.update_xaxes(
     categoryorder="array",
     categoryarray=rating_df.sort_values(by="Rating", ascending=False)["Sandwich Shop"],
 )
 st.plotly_chart(final_graph)
+
+
+

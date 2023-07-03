@@ -82,9 +82,10 @@ if any(df["Pairing 1"] == df["Pairing 2"]):
 edited_df = st.data_editor(df, use_container_width=True)
 
 
+
 st.divider()
 
-
+#uncomment the next line if you would like to use this!
 #edited_df.to_csv("sandwich_pairings.csv", index=False)
 st.success("Pairings saved!")
 
